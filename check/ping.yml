@@ -1,5 +1,7 @@
 ---
 - name: "Get ping response"
   hosts: all
+
+  become: true
   tasks:
   - action: ping
