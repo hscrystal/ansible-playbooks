@@ -1,6 +1,6 @@
 ---
 - name: "Update apt Packages"
-  hosts: all
+  hosts: "{{ host }}"
 
   become: true
   tasks:
