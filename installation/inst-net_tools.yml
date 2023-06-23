@@ -1,0 +1,11 @@
+---
+- name: "Install Net-tools"
+  hosts: "{{ host }}"
+
+  become: true
+  tasks:
+    - name: "Install Net-tools"
+      apt:
+        name:
+          - net-tools
+        update_cache: yes
