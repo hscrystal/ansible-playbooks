@@ -1,8 +1,9 @@
 ---
 - name: "Update apt Packages"
   hosts: "{{ host }}"
-
   become: true
+  become_user: root
+
   tasks:
     - name: "Update and upgrade all packages"
       apt:
