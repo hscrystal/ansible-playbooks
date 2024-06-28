@@ -1,5 +1,6 @@
 ---
 - name: "Get ping response"
   hosts: "{{ host }}"
+  become: true
   tasks:
   - action: ping
