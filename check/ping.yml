@@ -1,5 +1,6 @@
 ---
 - name: "Get ping response"
+  gather_facts: no
   hosts: "{{ host }}"
   tasks:
   - action: ping
