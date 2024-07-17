@@ -8,4 +8,4 @@
 
     - name: Display service status
       debug:
-        msg: "Service status: {{service_status_service.stdout}}"
+        msg: "Service status: {{service_status_service}}"
