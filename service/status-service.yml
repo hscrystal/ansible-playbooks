@@ -2,7 +2,7 @@
   hosts: "{{ host }}"
   tasks:
     - name: Check service status with service
-      shell: service cron status || true
+      shell: service crond status || true
       register: service_status_service
       ignore_errors: yes
 
