@@ -1,0 +1,11 @@
+- name: "Check Status Service"
+  hosts: "{{ host }}"
+  tasks:
+    - name: Check service status with service
+      shell: service cron status || true
+      register: service_status_service
+      ignore_errors: yes
+
+    - name: Display service status
+      debug:
+        msg: "Service status: {{service_status_service.stdout}}"
