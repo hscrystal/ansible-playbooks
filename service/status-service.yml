@@ -1,8 +1,8 @@
 - name: "Check Status Service"
   hosts: "{{ host }}"
   tasks:
-    - name: Check service status with service
-      shell: service crond status || true
+    - name: Check service status with systemctl
+      shell: systemctl is-active crond || true
       register: service_status_service
       ignore_errors: yes
 
