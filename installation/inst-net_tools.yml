@@ -1,11 +1,12 @@
 ---
-- name: "Install Net-tools"
+- name: "Install Pre-Packages for Linux"
   hosts: "{{ host }}"
 
   become: true
   tasks:
-    - name: "Install Net-tools"
+    - name: "Install packages by list"
       apt:
         name:
           - net-tools
+          - htop
         update_cache: yes
