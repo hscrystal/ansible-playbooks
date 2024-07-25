@@ -1,15 +1,15 @@
 ---
 - name: "Update apt Packages"
   hosts: "{{ hosts }}"
-
   tasks:
     - name: "Update and upgrade all packages"
       apt:
         update_cache: yes
         upgrade: yes
+        
     - name: Reboot box if kernel/libs updated and requested by the system
       shell: sleep 10 && /sbin/shutdown -r now 'Rebooting box to update system libs/kernel as needed' 
-      rgs:
+      args:
         removes: /var/run/reboot-required
       async: 300
       poll: 0
