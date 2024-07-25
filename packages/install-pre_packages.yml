@@ -1,6 +1,6 @@
 ---
 - name: "Install Pre-Packages for Linux"
-  hosts: "{{ host }}"
+  hosts: "{{ hosts }}"
 
   become: true
   tasks:
