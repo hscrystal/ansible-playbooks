@@ -1,6 +1,6 @@
 ---
 - name: "Update apt Packages"
-  hosts: "{{ host }}"
+  hosts: "{{ hosts }}"
   become: true
   become_user: root
 
