@@ -9,4 +9,5 @@
         name:
           - net-tools
           - htop
+          - vim
         update_cache: yes
