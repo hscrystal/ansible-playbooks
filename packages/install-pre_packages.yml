@@ -10,4 +10,5 @@
           - net-tools
           - htop
           - vim
+          - nfs-common
         update_cache: yes
