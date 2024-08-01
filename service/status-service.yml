@@ -1,5 +1,5 @@
 - name: "Check Status Service"
-  hosts: "{{ host }}"
+  hosts: "{{ hosts }}"
   tasks:
     - name: Check service status with systemctl
       shell: systemctl is-active crond || true
