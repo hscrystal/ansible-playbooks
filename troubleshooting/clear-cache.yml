@@ -1,0 +1,5 @@
+- name: "Check Status Service"
+  hosts: "{{ host }}"
+  tasks:
+    - name: Clearing the cache  
+      shell: sync; echo 3 > /proc/sys/vm/drop_caches
