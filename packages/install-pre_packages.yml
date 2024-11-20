@@ -11,4 +11,5 @@
           - htop
           - vim
           - nfs-common
+          - iotop
         update_cache: yes
