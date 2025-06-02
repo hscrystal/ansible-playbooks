@@ -3,7 +3,7 @@
   hosts: kube_control_plane
   tasks:
     - name: Get cluster information
-      command: kubectl get node
+      command: kubectl cluster-info
       register: cluster_info_output
 
     - name: Display cluster information
