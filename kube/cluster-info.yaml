@@ -1,6 +1,6 @@
 ---
 - name: Gather Kubernetes Cluster Info
-  hosts: kube-master
+  hosts: kube_control_plane
   tasks:
     - name: Get cluster information
       command: kubectl cluster-info
