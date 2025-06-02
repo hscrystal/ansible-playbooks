@@ -1,0 +1,11 @@
+---
+- name: Gather Kubernetes Cluster Info
+  hosts: kube-master
+  tasks:
+    - name: Get cluster information
+      command: kubectl cluster-info
+      register: cluster_info_output
+
+    - name: Display cluster information
+      debug:
+        var: cluster_info_output.stdout
