@@ -1,6 +1,17 @@
 ---
 - name: "Get ping response"
-  gather_facts: yes
-  hosts: "{{ node }}"
+  hosts: "{{ node | default('all') }}"
+  gather_facts: true
+  become: true
   tasks:
-  - action: ping
+    - name: Ping
+      ansible.builtin.ping:
+
+    - name: Check sudo user
+      ansible.builtin.command: whoami
+      register: r
+      changed_when: false
+
+    - name: Show result
+      ansible.builtin.debug:
+        var: r.stdout
